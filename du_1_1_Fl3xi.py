@@ -1,72 +1,76 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 import random
 import time
 
 def KdeToJsme():
-    print("Vítejte do kasína!")
+    print("VÃ­tejte do kasÃ­na!")
     time.sleep(2)
-    print("Copak si chcete zahrát?")
+    print("Copak si chcete zahrÃ¡t?")
     time.sleep(2)
 
 def tiskni_hod_kostkou():
     znova = "ano"
     while znova == "ano" or znova == "Ano":
         cislo = random.randint(1,6)
-        text = f"Hodil/a jsi èíslo {cislo} na kostce!"
+        text = f"Hodil/a jsi ÄÃ­slo {cislo} na kostce!"
         print(text)
         nepritel = random.randint(1,6)
-        txt = f"Tvùj nepøítel hodil {nepritel} na kostce!"
+        txt = f"TvÅ¯j nepÅ™Ã­tel hodil {nepritel} na kostce!"
         print(txt)
         zprava = random.randint(1, 5)
         if cislo > nepritel:
 
             if zprava == 1:
-                print("Koukám, e jsi dneska mìl/a docela štìstí!")
+                print("KoukÃ¡m, Å¾e jsi dneska mÄ›l/a docela Å¡tÄ›stÃ­!")
 
             elif zprava == 2:
-                print("Pìknì, jsem zvìdav jak se ti to povede pøíštì!")
+                print("PÄ›knÄ›, jsem zvÄ›dav jak se ti to povede pÅ™Ã­Å¡tÄ›!")
 
             elif zprava == 3:
-                print("Hmm, máš štìstí, to se mì nelíbí!")
+                print("Hmm, mÄ›l Å¡tÄ›stÃ­, to se mÄ› nelÃ­bÃ­!")
 
             elif zprava == 4:
-                print("Nemysli si, e pøíštì taky vyhraješ!")
+                print("Nemysli si, Å¾e pÅ™Ã­Å¡tÄ› taky vyhrajeÅ¡!")
 
             else:
-                print("Podcenil jsem tì, pøíštì se musím pøipravit lépe...")
+                print("Podcenil jsem to, pÅ™Ã­Å¡tÄ› se musÃ­m pÅ™ipravit lÃ©pe...")
 
 
         elif cislo < nepritel:
 
             if zprava == 1 or 2:
-                print("Ha, prohrál/a jsi!")
+                print("Ha, prohrÃ¡l/a jsi!")
 
             elif zprava == 3 or 4:
-                print("Tomu bych neøíkal štìstí, prostì jsem lepší!")
+                print("Tomu bych neÅ™Ã­kal Å¡tÄ›stÃ­, prostÄ› jsem lepÅ¡Ã­!")
 
             else:
-                print("Docela jsi mì podcenil, a to jsi nemìl!")
+                print("Docela jsi mÄ› podcenil, a to jsi nemÄ›l!")
 
 
 
         else:
-            print("shoda? tak to nefunguje! Házej znova!")
+            print("shoda? tak to nefunguje! HÃ¡zej znova!")
             reroll1 = random.randint(1,6)
             reroll2 = random.randint(1,6)
-            rrll1 = f"Hodil/a jsi èíslo {reroll1} na kostce!"
-            rrll2 = f"Tvùj nepøítel hodil {reroll2} na kostce!"
+            rrll1 = f"Hodil/a jsi ÄÃ­slo {reroll1} na kostce!"
+            rrll2 = f"TvÅ¯j nepÅ™Ã­tel hodil {reroll2} na kostce!"
             print(rrll1)
             print(rrll2)
 
             if reroll1 > reroll2:
-                print("Tak dobøe no, tak jsi vyhrál!")
+                print("Tak dobÅ™e no, tak jsi vyhrÃ¡l!")
 
             elif reroll1 < reroll2:
-                print("HA,tak pøeci jenom jsem vyhrál!")
+                print("HA,tak pÅ™eci jenom jsem vyhrÃ¡l!")
 
             else:
-                print("Tohle u není normální, konèím tu s tebou!")
-        znova = input("Chceš si zahrát znova? Tak napiš ano: ")
-    print("Tak zase nìkdy!")
+                print("Tohle uÅ¾ nenÃ­ normÃ¡lnÃ­, konÄÃ­m tu s tebou!")
+        znova = input("ChceÅ¡ si zahrÃ¡t znova? Tak napiÅ¡ ano: ")
+    print("Tak zase nÄ›kdy!")
 
 def Hadani_cisla():
     dalsipokus = "ano"
@@ -74,39 +78,39 @@ def Hadani_cisla():
 
         actual_cislo = random.randint(1, 50)
 
-        cislo = int(input("Tak mi øekni co si myslíš e si myslím v rozmezí od 1 do 50: "))
+        cislo = int(input("Tak mi Å™ekni co si myslÃ­Å¡ Å¾e si myslÃ­m v rozmezÃ­ od 1 do 50: "))
 
         if cislo > 50 or cislo < 1:
-            print("Nevím jestli èteš správnì ale øekl jsem od 1 do 50!")
+            print("NevÃ­m jestli ÄteÅ¡ sprÃ¡vnÄ› ale Å™ekl jsem od 1 do 50!")
 
 
 
         elif cislo < 50 or cislo == 50:
             if cislo == actual_cislo:
-                 print(f"Pìkné, èíslo {actual_cislo} je moje oblíbené, pøíštì si na tebe vezmu nìco lepšího!!")
+                 print(f"PÄ›knÄ›, ÄÃ­slo {actual_cislo} je moje oblÃ­benÃ©, pÅ™Ã­Å¡tÄ› si na tebe vezmu nÄ›co lepÅ¡Ã­ho!!")
 
             else:
                  print(f"Chyba bylo to {actual_cislo}!")
-        dalsipokus = input("Chceš to zkusit znova? Tak napiš ano!: ")
+        dalsipokus = input("ChceÅ¡ to zkusit znova? Tak napiÅ¡ ano!: ")
 
-    print("No nevadí tak zase nìkdy!")
+    print("No nevadÃ­ tak zase nÄ›kdy!")
 
 def Ruleta():
-    print("Take ruleta jo? Tak dobøe no!")
-    print("Na zaèátku ti dám 500 etonù zdarma, jestli to všechno prohraješ tak tvoje smùla!")
+    print("TakÅ¾e ruleta jo? Tak dobÅ™e no!")
+    print("Na zaÄÃ¡tku ti dÃ¡m 500 Å¾etonÅ¯ zdarma, jestli to vÅ¡echno prohrajeÅ¡ tak tvoje smÅ¯la!")
     zetony = 500
     dal = "ano"
     while "ano" in dal.lower():
-        sazka = int(input("tak kolik chceš vsadit?: "))
+        sazka = int(input("tak kolik chceÅ¡ vsadit?: "))
         if sazka > zetony:
-            print("smùla, tolik ještì nemáš!")
+            print("smÅ¯la, tolik jeÅ¡tÄ› nemÃ¡Å¡!")
         else:
-            barva = input("Tak jakou barvu tipuješ? Zelená 5x, èerná a èervená 2x: ")
-            if "zelená" in barva.lower() or "zelena" in barva.lower():
+            barva = input("Tak jakou barvu tipujeÅ¡? ZelenÃ¡ 5x, ÄernÃ¡ a ÄervenÃ¡ 2x: ")
+            if "zelenÃ¡" in barva.lower() or "zelena" in barva.lower():
                 barlos = 3
-            elif "èervená" in barva.lower() or "cervena" in barva.lower():
+            elif "ÄervenÃ¡" in barva.lower() or "cervena" in barva.lower():
                 barlos = 1
-            elif "èerná" in barva.lower() or "cerna" in barva.lower():
+            elif "ÄernÃ¡" in barva.lower() or "cerna" in barva.lower():
                 barlos = 2
 
             los = random.randint(1, 100)
@@ -121,33 +125,33 @@ def Ruleta():
                 if barlos == 1:
                     sazka = sazka*2
                     zetony += sazka
-                    print(f"Trefil jsi se do èervené! Pìkná práce, právì teï máš {zetony} etonù!")
+                    print(f"Trefil jsi se do ÄervenÃ©! PÄ›knÃ¡ prÃ¡ce, prÃ¡vÄ› teÄ mÃ¡Å¡ {zetony} Å¾etonÅ¯!")
                 else:
                     zetony -= sazka
-                    print("Smùla, tentokrát to nevyšlo! zkus to znova!")
+                    print("SmÅ¯la, tentokrÃ¡t to nevyÅ¡lo! zkus to znova!")
 
 
             elif losbarva == 2:
                 if barlos == 2:
                     sazka = sazka*2
                     zetony += sazka
-                    print(f"Pìknı, trefil jsi se do èerné, tvoje konto teï obsahuje {zetony} etonù!")
+                    print(f"PÄ›knÄ›, trefil jsi se do ÄernÃ©, tvoje konto teÄ obsahuje {zetony} Å¾etonÅ¯!")
                 else:
                     zetony -= sazka
-                    print("Smùla, tentokrát to nevyšlo! zkus to znova!")
+                    print("SmÅ¯la, tentokrÃ¡t to nevyÅ¡lo! zkus to znova!")
 
 
             elif losbarva == 3:
                 if barlos == 3:
                     sazka = sazka*5
                     zetony += sazka
-                    print(f"WOW, trefil jsi zelenou! Právì máš {zetony} etonù!")
+                    print(f"WOW, trefil jsi zelenou! PrÃ¡vÄ› mÃ¡Å¡ {zetony} Å¾etonÅ¯!")
                 else:
                     zetony -= sazka
-                    print("Smùla, tentokrát to nevyšlo! zkus to znova!")
+                    print("SmÅ¯la, tentokrÃ¡t to nevyÅ¡lo! zkus to znova!")
 
 
-        dal = input("chceš hrát dál? Tak napiš Ano: ")
+        dal = input("chceÅ¡ hrÃ¡t dÃ¡l? Tak napiÅ¡ Ano: ")
 
 
 
@@ -157,7 +161,7 @@ def __main__():
     KdeToJsme()
     time.sleep(1)
     print("1. Hod kostkami")
-    print("2. Hádání èísla")
+    print("2. HÃ¡dÃ¡nÃ­ ÄÃ­sla")
     print("3. Klasickou nudnou ruletu!")
     time.sleep(2)
     hra = input("Tak kterou?: ")
@@ -168,5 +172,5 @@ def __main__():
     elif hra == "3":
         Ruleta()
     else:
-        print("No nevadí, tøeba si to ještì rozmyslíš!")
+        print("No nevadÃ­, tÅ™eba si to jeÅ¡tÄ› rozmyslÃ­Å¡!")
 __main__()
